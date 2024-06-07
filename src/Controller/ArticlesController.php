@@ -111,6 +111,7 @@ class ArticlesController extends AppController
             'limit' => 5,
             'order' => ['Articles.id' => 'desc']
         ];
+
         $articles = $this->paginate($this->Articles->find());
         $this->set(compact('articles'));        
     }
@@ -136,7 +137,6 @@ class ArticlesController extends AppController
                 $this->Flash->success(__('The article has been saved.'));
                 //debug($article);
                 $message = "New Post by " . $this->useremail;
-                //$mailer = new Mailer('default'); // move to initialize
                 $this->mailer
                     ->setEmailFormat('html')
                     ->setTo('fumiko@svr.home.com')
@@ -146,30 +146,6 @@ class ArticlesController extends AppController
                         ->setTemplate('newpost')
                         ->setLayout('default');
                 $this->mailer->deliver();
-
-                /** 
-                // send mail
-                $this->mailer
-                    ->setEmailFormat('html')
-                    ->setFrom('fumiko@svr.home.com')
-                    ->setTo('tom@svr.home.com')  // target_list to send email
-                    ->setSubject('新しい投稿がありました')
-                    ->setViewVars(['article' => $article])
-                    ->viewBuilder()
-                        ->setTemplate('default')
-                        ->setLayout('default');
-                $this->mailer->deliver();
-                */
-
-                /** 
-                // put here Event dispatch program here
-                $message = "New Post by " . $this->useremail;
-                //debug($message);
-                $event = new Event('Notification.E-Mail',$this,['message' => $message, 'article' => $article]);
-                //debug($event);
-                $this->getEventManager()->dispatch($event);
-                $this->Flash->success(__('event dispatched.' . "form $this->useremail"));
-                */
                 return $this->redirect(['action' => 'index']);
             }
             $this->Flash->error(__('The article could not be saved. Please, try again.'));
