@@ -5,6 +5,7 @@ use Cake\Database\Connection;
 use Cake\Database\Driver\Mysql;
 use Cake\Log\Engine\FileLog;
 use Cake\Mailer\Transport\MailTransport;
+use Cake\Mailer\Transport\SmtpTransport;
 
 return [
     /*
@@ -65,6 +66,9 @@ return [
             'templates' => [ROOT . DS . 'templates' . DS],
             'locales' => [RESOURCES . 'locales' . DS],
         ],
+
+        // FileUpLoad
+        'uploadedFilesAsObjects' => false,
     ],
 
     /*
@@ -229,12 +233,14 @@ return [
      */
     'EmailTransport' => [
         'default' => [
-            'className' => MailTransport::class,
+            //'className' => MailTransport::class,
+            'className' => SmtpTransport::class,
             /*
              * The keys host, port, timeout, username, password, client and tls
              * are used in SMTP transports
              */
-            'host' => 'localhost',
+            //'host' => 'localhost',
+            'host' => 'svr.home.com',
             'port' => 25,
             'timeout' => 30,
             /*
@@ -260,7 +266,8 @@ return [
     'Email' => [
         'default' => [
             'transport' => 'default',
-            'from' => 'you@localhost',
+            //'from' => 'you@localhost',
+            'from' => 'tom@svr.home.com'
             /*
              * Will by default be set to config value of App.encoding, if that exists otherwise to UTF-8.
              */
