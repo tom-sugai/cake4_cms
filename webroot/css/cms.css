@@ -1,0 +1,45 @@
+header {
+    font-family:sans-serif,'Noto Serif CJK JP','Noto Sans CJK JP',
+    'Noto Sans Mono CJK JP';   
+    background-color:yellow;
+    height:auto;
+    margin:10px;
+    padding: 10px;
+    box-shadow: 0px 1px rgba(0, 0, 0, 0.24);
+    display:block;
+    /* border-radius:10px; */
+}
+.header-title { 
+    color:black; font-size: 24px; font-style:italic; font-weight:300;
+    line-height:150%; text-align:center; 
+    
+}
+.header-loginname { 
+    color:black; font-size: 14px; font-style:italic; font-weight:300;
+    line-height:150%; text-align:right;
+}
+.crumb-container {
+    margin-left:20px; text-align:left; font-style:italic; font-weight:400;
+    font-size:16px;color:red;
+}
+
+.article-index { border:solid 1px black; margin:10px;padding:10px;}
+.article-index-header { }
+.article-index-body { font-family:sans-serif,'Noto Serif CJK JP'; margin:4px 0px; }
+.article-index-footer { display:flex; justify-content:flex-start; gap:20px;}
+.article-index-footer > .posted-comments {color:red;}
+
+.article-view {border:solid 1px black; margin:4px; padding:4px;}
+.article-view-info { margin:2px;display:inline-flex;}
+.article-view-body { margin:2px;}
+.article-view-action { display:flex; justify-content:flex-start; gap:10px;}
+.article-view-action > .posted-comments {color:red;}
+
+.article-view-comments { border:solid 1px black; margin:10px; padding:10px; }
+.article-view-comment-info {}
+.article-view-comment-body {}
+.article-view-comment-action {
+    display:flex; justify-content:flex-start; gap:10px;}
+
+.user-view-info {border:2px solid greenyellow;margin:4px;padding:4px;}
+.user-view-articles {border:2px solid black;margin:4px;padding:4px;}
