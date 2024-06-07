@@ -91,7 +91,7 @@ class ArticlesController extends AppController
         
         $this->paginate = [
             'contain' => ['Users','Tags', 'Comments'],
-            'limit' => 6,
+            'limit' => 20,
             'order' => ['Articles.id' => 'desc']
         ];
 
@@ -108,7 +108,7 @@ class ArticlesController extends AppController
         $this->Authorization->skipAuthorization();
         $this->paginate = [
             'contain' => ['Users', 'Comments'],
-            'limit' => 5,
+            'limit' => 20,
             'order' => ['Articles.id' => 'desc']
         ];
 
