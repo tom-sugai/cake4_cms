@@ -3,6 +3,7 @@
 <table>
     <tr>
         <th>id</th>
+        <th>user</th>
         <th>title</th>
         <th>body</th>
         <th>comment</th>

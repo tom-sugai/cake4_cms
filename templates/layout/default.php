@@ -30,6 +30,9 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
 
     <?= $this->Html->css(['normalize.min', 'milligram.min', 'cake']) ?>
+    <?= $this->Html->css(['cms', 'article-top','hbg-menu']) ?>
+
+    <?= $this->Html->script(['jquery-3.6.0.min.js', 'hbg-menu.js']) ?>
 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
@@ -51,7 +54,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         <?= $this->Html->link('Logout','/users/logout') ?><br> 
         <?= $this->Html->link('NewPost','/articles/add') ?><br> 
         <?= $this->Html->link('MyPage',['controller' => 'Users', 'action' => 'view', $userid]) ?><br> 
-        <?= $this->Html->link('TopPage','/articles/index') ?><br> 
+        <?= $this->Html->link('TopPage','/articles/top') ?><br> 
     </div>
     <main class="main">
         <div class="container">
