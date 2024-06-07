@@ -10,6 +10,7 @@ use Cake\Mailer\Mailer;
 
 class ArticlesController extends AppController
 {
+    private $mailer;
     private $userid = null;
     private $useremail = null;
 
@@ -19,6 +20,10 @@ class ArticlesController extends AppController
         $this->loadComponent('Paginator');
         $this->loadComponent('Flash');
         $this->loadComponent('SendMail');
+
+        $this->mailer = new Mailer('default');
+
+
     }
 
     public function beforeFilter(\Cake\Event\EventInterface $event)
@@ -59,8 +64,8 @@ class ArticlesController extends AppController
         //return $this->redirect(['action' => 'index']);
         */
         
-        $mailer = new Mailer('default');
-        $mailer
+        //$mailer = new Mailer('default');
+        $this->mailer
             ->setTo('fumiko@svr.home.com')
             ->setSubject('About')
             ->deliver('My message');
@@ -132,9 +137,10 @@ class ArticlesController extends AppController
                 $this->Flash->success(__('The article has been saved.'));
                 //debug($article);
                 $message = "New Post by " . $this->useremail;
-                $mailer = new Mailer('default'); // move to beforeFilter
-                $mailer                          // change to $this->mailer
-                    ->setTo('fumiko@svr.home.com')
+                //$mailer = new Mailer('default'); // move to initialize
+                $this->mailer
+                    -->setEmailFormat('html')
+                    -->setTo('fumiko@svr.home.com')
                     ->setSubject('New Post')
                     ->deliver($message);
 
