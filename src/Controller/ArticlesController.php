@@ -139,10 +139,14 @@ class ArticlesController extends AppController
                 $message = "New Post by " . $this->useremail;
                 //$mailer = new Mailer('default'); // move to initialize
                 $this->mailer
-                    -->setEmailFormat('html')
-                    -->setTo('fumiko@svr.home.com')
+                    ->setEmailFormat('html')
+                    ->setTo('fumiko@svr.home.com')
                     ->setSubject('New Post')
-                    ->deliver($message);
+                    ->setViewVars(['message' => $message, 'article' => $article])
+                    ->viewBuilder()
+                        ->setTemplate('newpost')
+                        ->setLayout('default');
+                $this->mailer->deliver();
 
                 /** 
                 // send mail
