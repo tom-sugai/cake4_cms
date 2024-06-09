@@ -50,10 +50,10 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     </nav>
     <?= "Login User : " . $useremail ?>
     <div class="top-menu">
-        <?= $this->Html->link('Login','/users/login') ?><br>   
-        <?= $this->Html->link('Logout','/users/logout') ?><br> 
-        <?= $this->Html->link('NewPost','/articles/add') ?><br> 
-        <?= $this->Html->link('MyPage',['controller' => 'Users', 'action' => 'view', $userid]) ?><br> 
+        <?= $this->Html->link('Login','/users/login') ?>/ 
+        <?= $this->Html->link('Logout','/users/logout') ?>/ 
+        <?= $this->Html->link('NewPost','/articles/add') ?>/ 
+        <?= $this->Html->link('MyPage',['controller' => 'Users', 'action' => 'view', $userid]) ?>/
         <?= $this->Html->link('TopPage','/articles/top') ?><br> 
     </div>
     <main class="main">
