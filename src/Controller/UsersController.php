@@ -30,7 +30,7 @@ class UsersController extends AppController
             // redirect to /articles after login success
             $redirect = $this->request->getQuery('redirect', [
                 'controller' => 'Articles',
-                'action' => 'index',
+                'action' => 'top',
             ]);
             return $this->redirect($redirect);
         }
@@ -48,7 +48,7 @@ class UsersController extends AppController
         // POST, GET を問わず、ユーザーがログインしている場合はリダイレクトします
         if ($result && $result->isValid()) {
             $this->Authentication->logout();
-            return $this->redirect(['controller' => 'Articles', 'index' => 'login']);
+            return $this->redirect(['controller' => 'Articles', 'action' => 'top']);
         }
     }
     
