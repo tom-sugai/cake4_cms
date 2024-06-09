@@ -19,9 +19,7 @@ echo $this->fetch('script');
 ?>
 </head>
 <body>
-
-    <!-- もしすべてのビューでメニューを表示したい場合、ここに入れます -->
-    
+    <!-- もしすべてのビューでメニューを表示したい場合、ここに入れます -->    
     <header>
             <?= $this->element('headerbox'); ?>
     </header>
@@ -35,16 +33,13 @@ echo $this->fetch('script');
             <?= $this->Html->link('TopPage','/articles/top') ?><br> 
         </div>
     </div>
-
     <!-- ここがビューで表示されるようにしたい場所です -->
     <container>
             <?= $this->fetch('content') ?>
     </container>
-    
     <!-- 表示される各ページにフッターを追加します -->
     <footer>
             <?= $this->element('footerbox'); ?>
     </footer>
-    
     </body>
 </html>
