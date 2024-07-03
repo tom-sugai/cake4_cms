@@ -304,7 +304,7 @@ return [
             'className' => Connection::class,
             'driver' => Mysql::class,
             'persistent' => false,
-            'timezone' => 'Asia/Tokyo',
+            //'timezone' => 'Asia/Tokyo',
             //'timezone' => 'UTC',
 
             /*
