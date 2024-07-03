@@ -267,7 +267,7 @@ return [
         'default' => [
             'transport' => 'default',
             //'from' => 'you@localhost',
-            'from' => 'tom@svr.home.com'
+            'from' => 'tom.sugai@tomsite.sakura.ne.jp'
             /*
              * Will by default be set to config value of App.encoding, if that exists otherwise to UTF-8.
              */
