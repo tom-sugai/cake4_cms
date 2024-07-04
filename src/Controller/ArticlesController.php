@@ -66,9 +66,11 @@ class ArticlesController extends AppController
         
         //$mailer = new Mailer('default');
         $this->mailer
-            //->setTo('tom.sugai@tomsite.sakura.ne.jp')
-            //->setTo('tom.sugai@gmail.com')
-            ->setTo('tom.sugai@theia.ocn.ne.jp','tom.sugai@mineo.jp')
+            //->setTo('tom.sugai@tomsite.sakura.ne.jp') OK
+            //->setTo('tom.sugai@gmail.com') NG
+            //->setTo('tom.sugai@theia.ocn.ne.jp') OK
+            ->setTo('tom.sugai@mineo.jp')
+            //->setTo(['tom.sugai@theia.ocn.ne.jp','tom.sugai@mineo.jp'])
             ->setSubject('Greeting')
             ->deliver('Hello Tom!!');
         
