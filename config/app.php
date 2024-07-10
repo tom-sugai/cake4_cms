@@ -256,8 +256,8 @@ return [
         'gmail' => [
             'host' => 'smtp.gmail.com',
             'port' => 587,
-            'username' => 'tom.sugai@gmail.com',
-            'password' => 'fm0317fm',
+            'username' => 'my@gmail.com',
+            'password' => 'secret',
             'className' => 'Smtp',
             'tls' => true
         ]
