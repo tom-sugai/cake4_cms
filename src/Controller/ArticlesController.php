@@ -68,10 +68,10 @@ class ArticlesController extends AppController
         $this->mailer
             ->setTransport('default')
             //->setTo('tom.sugai@tomsite.sakura.ne.jp') OK
-            ->setTo('tom.sugai@gmail.com')
+            //->setTo('tom.sugai@gmail.com')
             //->setTo('tom.sugai@theia.ocn.ne.jp') OK
             //->setTo('tom.sugai@mineo.jp')
-            //->setTo(['tom.sugai@theia.ocn.ne.jp','tom.sugai@mineo.jp'])
+            ->setTo(['tom.sugai@theia.ocn.ne.jp','tom.sugai@gmail.com'])
             ->setSubject('Message')
             ->deliver('Could i change ??');
         
