@@ -66,7 +66,7 @@ class ArticlesController extends AppController
         
         //$mailer = new Mailer('default');
         $this->mailer
-            ->setTransport('gmail')
+            ->setTransport('default')
             //->setTo('tom.sugai@tomsite.sakura.ne.jp') OK
             //->setTo('tom.sugai@gmail.com')
             //->setTo('tom.sugai@theia.ocn.ne.jp') OK
