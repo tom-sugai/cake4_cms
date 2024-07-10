@@ -252,6 +252,15 @@ return [
             'tls' => false,
             'url' => env('EMAIL_TRANSPORT_DEFAULT_URL', null),
         ],
+            // SMTP構成の例
+        'gmail' => [
+            'host' => 'smtp.gmail.com',
+            'port' => 587,
+            'username' => 'my@gmail.com',
+            'password' => 'secret',
+            'className' => 'Smtp',
+            'tls' => true
+        ]
     ],
 
     /*
