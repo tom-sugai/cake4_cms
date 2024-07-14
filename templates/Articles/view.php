@@ -1,5 +1,5 @@
 <p><?= "Id : " . $article->id . " Author : " . $article->user->email ?>
-<h3><?= "Title :" . h($article->title) ?></h3>
+<h3><?= "Title : " . h($article->title) ?></h3>
 <p><?= "Body : " . h($article->body) ?></p>
 <!-- // display tag_string -->
 <p><b>Tags:</b><?= h($article->tag_string) ?></p>
