@@ -1,4 +1,4 @@
-<p><?= "Id : " . $article->id . "Author : " . $article->user->email ?>
+<p><?= "Id : " . $article->id . " Author : " . $article->user->email ?>
 <h3><?= "Title :" . h($article->title) ?></h3>
 <p><?= "Body : " . h($article->body) ?></p>
 <!-- // display tag_string -->
