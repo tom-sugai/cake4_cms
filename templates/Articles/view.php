@@ -1,6 +1,6 @@
-<p><?= "id : " . $article->id ?>
-<h3><?= h($article->title) ?></h3>
-<p><?= h($article->body) ?></p>
+<p><?= "Id : " . $article->id . "Author : " . $article->user->email ?>
+<h3><?= "Title :" . h($article->title) ?></h3>
+<p><?= "Body : " . h($article->body) ?></p>
 <!-- // display tag_string -->
 <p><b>Tags:</b><?= h($article->tag_string) ?></p>
 <p><small>Created : <?= $article->created->format(DATE_RFC850) ?></small></p>
