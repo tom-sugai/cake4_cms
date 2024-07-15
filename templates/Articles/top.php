@@ -1,6 +1,6 @@
 <?php
     //-------->set title-----------------
-    $this->assign('title', 'theme-xxxx');
+    $this->assign('title', 'Cake4_cms');
 
     //------->sidebar section -----------
     //$this->extend('/Common/articlecom');
