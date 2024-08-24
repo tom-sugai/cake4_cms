@@ -141,13 +141,14 @@ class ArticlesController extends AppController
             if ($this->Articles->save($article)) {
                 $this->Flash->success(__('The article has been saved.'));
                 //debug($article);
+                $subject = "PostNo." . $article->id . "posted";
                 $message = "New Post by " . $this->useremail;
                 $this->mailer
                     ->setEmailFormat('html')
                     //->setTo('fumiko.sugai@tomsite.sakura.ne.jp')
                     //->setTo('tom.sugai@theia.ocn.ne.jp')
                     ->setTo(['tom.sugai@theia.ocn.ne.jp','tom.sugai@gmail.com'])                    
-                    ->setSubject('New Post')
+                    ->setSubject($subject)
                     ->setViewVars(['message' => $message, 'article' => $article])
                     ->viewBuilder()
                         ->setTemplate('newpost')
