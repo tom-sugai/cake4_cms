@@ -144,7 +144,7 @@ class ArticlesController extends AppController
                 $subject = "PostNo." . $article->id . "posted";
                 $message = "New Post by " . $this->useremail;
                 $setTo = ['tom.sugai@theia.ocn.ne.jp','tom_sugai@yahoo.co.jp','tom.sugai@mineo.jp','tom.sugai@outlook.jp','tom.sugai@tomsite.sakura.ne.jp','tom.sugai@gmail.com'];                  
-                debug($setTo);
+                //debug($setTo);
                 $this->mailer
                     ->setEmailFormat('html')
                     //->setTo('fumiko.sugai@tomsite.sakura.ne.jp')
